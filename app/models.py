@@ -15,18 +15,18 @@ class Product(models.Model):
     UNIT = (
         ('Ton', 'Ton'),
         ('Kg', 'Kg'),
-        ('Lt', 'Lt'),
+        ('Lt', 'Lt'),   
     ) 
 
     image = models.ImageField('Image', null=True)
     name = models.CharField('Company Name', max_length=255, null=True)
-    description = models.CharField('Address', max_length=500, null=True)
+    description = models.CharField('Description', max_length=500, null=True)
     type = models.CharField('Type', choices=TYPE, max_length=100, null=True)
     value = models.FloatField('Expected Value')
     unit = models.CharField("Unit", choices=UNIT, max_length=100, null=True)
 
     def __str__(self):
-        return (self.id + " | " + self.name)
+        return (str(self.id) + " | " + self.name)
 
 class Company(models.Model):
     CLASSIFICATION = (
@@ -50,7 +50,7 @@ class Company(models.Model):
     outflow = models.ManyToManyField(Product, related_name="Outflow_Products", blank=True)
 
     def __str__(self):
-        return (self.id + " | " + self.name)
+        return (str(self.id) + " | " + self.name)
 
 class Quotation(models.Model):
     UNIT = (
@@ -79,7 +79,7 @@ class Quotation(models.Model):
     status = models.CharField('Status', choices=STATUS, max_length=100, null=True)
 
     def __str__(self):
-        return (self.id + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
+        return (str(self.id) + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
 
 class Transaction(models.Model):
     UNIT = (
@@ -110,7 +110,7 @@ class Transaction(models.Model):
     quotation = models.OneToOneField(Quotation, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return (self.id + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
+        return (str(self.id) + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
     
 class Inventory(models.Model):
     TYPE = (
@@ -134,7 +134,7 @@ class Inventory(models.Model):
     last_updated = models.DateTimeField("Date Last Updated", null=True)  
 
     def __str__(self):
-        return (self.id + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
+        return (str(self.id) + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.date_created.date))
     
 class DeliveryTracker(models.Model):
     UNIT = (
@@ -168,5 +168,5 @@ class DeliveryTracker(models.Model):
     transaction = models.OneToOneField(Transaction, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return (self.id + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.orderDate.date))
+        return (str(self.id) + " | " + str(self.product.name) + " | " + str(self.seller.name) + " | " + str(self.buyer.name) + " | " + str(self.orderDate.date))
 
