@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>Orobo</title>
+</head>
+<body>
+    <div class="main-container">
+        {% include './navbar.html' %}
+        <div class="container">
+            <h1>Good morning, OroboTech!</h1>
+            
+            <h3>Quotations</h3>
+            <table class="table-trans">
+                <thead>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Company</th>
+                    <th>Material</th>
+                    <th>Expected Quote</th>
+                    <th>Final Quote</th>
+                    <th>Quote</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Company A</td>
+                        <td>Credit</td>
+                        <td>12/11/2023 11:59 am</td>
+                        <td>₹200</td>
+                        <td>₹300</td>
+                        <td>₹500</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+        {% include './ribbon.html' %}
+    </div>
+</body>
+</html>

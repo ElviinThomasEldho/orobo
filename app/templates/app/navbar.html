@@ -1,0 +1,12 @@
+{% load static %}
+<nav>
+    <img class="logo" src="{% static 'images/logo.png' %}" alt="logo">
+    <div class="nav-btn-group">
+        <a href="{% url 'dashboard' %}" class="btn-nav">Dashboard</a>
+        <a href="{% url 'transactions' %}" class="btn-nav">Transactions</a>
+        <a href="{% url 'quotation' %}" class="btn-nav">Quotations</a>
+        <a href="{% url 'inventory' %}" class="btn-nav">Inventory</a>
+        <a href="{% url 'material' %}" class="btn-nav">Material</a>
+        <a href="{% url 'delivery' %}" class="btn-nav">Delivery</a>
+    </div>
+</nav>

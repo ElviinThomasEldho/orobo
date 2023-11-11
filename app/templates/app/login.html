@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <style>
+        .login-container {
+            background-image: url("{% static 'images/loginbg.png' %}");
+            background-size: cover;
+        }
+    </style>
+    <title>Orobo</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="loginForm form-container">
+            <h1>LOGIN</h1>
+            <form action="">
+                {% csrf_token %}
+                <label for="email">Email ID</label>
+                <input type="email" name="email" id="email">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <button class="btn-primary" type="submit">LOG IN</button>
+                <div class="row">
+                    <p>New User?</p>
+                    <a href="{% url 'signup' %}" class="btn-primary-outline">SIGN UP</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

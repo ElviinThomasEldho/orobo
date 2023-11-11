@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>Orobo</title>
+</head>
+<body>
+    <div class="main-container">
+        {% include './navbar.html' %}        
+        <div class="container">
+            <h1>Good morning, OroboTech!</h1>
+    
+            <h3>Revenue</h3>
+            <div class="rev-container">
+                <div class="rev-card rev-card-primary">
+                    <img src="{% static 'images/overall.png' %}" alt="" class="icon">
+                    <div class="text">
+                        <p class="label">Overall</p>
+                        <p class="value">₹90,569.00</p>
+                    </div>
+                </div>
+                <div class="rev-card">
+                    <img src="{% static 'images/inflow.png' %}" alt="" class="icon">
+                    <div class="text">
+                        <p class="label">Inflow</p>
+                        <p class="value">₹90,569.00</p>
+                    </div>
+                </div>
+                <div class="rev-card">
+                    <img src="{% static 'images/outflow.png' %}" alt="" class="icon">
+                    <div class="text">
+                        <p class="label">Outflow</p>
+                        <p class="value">₹90,569.00</p>
+                    </div>
+                </div>
+            </div>
+    
+            <h3>Statistics</h3>
+            <div class="stat-container">
+                <div class="stat-card-dark">
+                    <p class="title">Green Score</p>
+                    <p class="value">3</p>
+                    <div class="value-label">Out of 5</div>
+                    <p class="ranking">1234</p>
+                    <div class="ranking-label">Ranking</div>            
+                </div>
+                <div class="stat-card-neutral">
+                    <p class="title">Risk Factor</p>
+                    <p class="value">62%</p>
+                    <div class="value-label">Medium Risk</div>         
+                </div>
+            </div>
+            
+            <h3>Transactions List</h3>
+            <table class="table-trans">
+                <thead>
+                    <th>Company</th>
+                    <th>Transaction Type</th>
+                    <th>Date Time</th>
+                    <th>Paid Amount</th>
+                    <th>Unpaid Amount</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Company A</td>
+                        <td>Credit</td>
+                        <td>12/11/2023 11:59 am</td>
+                        <td>₹200</td>
+                        <td>₹300</td>
+                        <td>₹500</td>
+                        <td class="status">Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </div>
+        {% include './ribbon.html' %}
+    </div>
+</body>
+</html>

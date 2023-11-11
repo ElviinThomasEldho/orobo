@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <title>Orobo</title>
+</head>
+<body>
+    <div class="main-container">
+        {% include './navbar.html' %}
+        <div class="container">
+            <h1>Good morning, OroboTech!</h1>
+
+            <h3>Inventory</h3>
+            
+            <div class="btn-category-group">
+                <a href="#" class="btn-category all">All</a>
+                <a href="#" class="btn-category">Inflow</a>
+                <a href="#" class="btn-category outflow">Outflow</a>
+            </div>
+            
+            <div class="btn-sort-group">
+                <p class="sort-title">Sort by</p>
+                <button class="btn-sort">Product</button>
+                <button class="btn-sort">Quantity</button>
+                <button class="btn-sort">Expected Value</button>
+                <button class="btn-sort">Description</button>
+            </div>
+
+            <div class="tracker-container">
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+                <div class="tracker-card">
+                    <div class="row">
+                        <p class="name">Product A</p>
+                        <p class="type">Inflow</p>
+                    </div>
+                    <p class="status">Arriving Tuesday.</p>
+                </div>
+            </div>
+    
+        </div>
+        {% include './ribbon.html' %}
+    </div>
+</body>
+</html>

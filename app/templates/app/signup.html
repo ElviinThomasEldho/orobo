@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <style>
+        .login-container {
+            background-image: url("{% static 'images/signupbg.png' %}");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <title>Orobo</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="signupForm form-container">
+            <h1>SIGN UP</h1>
+            <form action="">
+                {% csrf_token %}
+                <label for="text">COMPANY NAME</label>
+                <input type="text" name="companyName" id="companyName">
+                <label for="text">COMPANY IDENTIFICATION NUMBER</label>
+                <input type="text" name="companyName" id="companyName">
+                <label for="text">ADDRESS</label>
+                <input type="text" name="companyName" id="companyName">
+                <label for="text">CLASSIFICATION</label>
+                <input type="text" name="companyName" id="companyName">
+                <label for="text">INDUSTRY</label>
+                <input type="text" name="companyName" id="companyName">
+                <label for="text">REVENUE PER ANNUM</label>
+                <input type="text" name="companyName" id="companyName">
+                <button class="btn-primary" type="submit">SIGN UP</button>
+                <div class="row">
+                    <p>Already a User?</p>
+                    <a href="{% url 'login' %}" class="btn-primary-outline">LOGIN</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
